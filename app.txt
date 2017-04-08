@@ -1,0 +1,6 @@
+[2017-03-23 22:15:32] name.WARNING: Foo [] []
+[2017-03-23 22:25:54] name.WARNING: Foo [] []
+[2017-03-23 18:26:42] name.WARNING: Foo [] []
+[2017-03-23 18:53:28] name.WARNING: Foo [] []
+[2017-03-23 18:54:47] name.WARNING: Oh Noes [] []
+[2017-03-23 19:07:45] name.WARNING: Oh Noes [] []

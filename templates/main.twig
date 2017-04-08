@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>{% block title %}Roilton Seguros{% endblock title %}</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/animate.min.css">
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+ </head>
+
+<body>
+
+
+
+<!--NAVIGATION-->
+<header>
+<div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+{% include 'flash.twig' %}
+  <div class="">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+
+          <a href="#" class="navbar-brand">Roilton Seguros</a>
+      </div>
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#header" class="selected">Início</a></li>
+              <li><a href="#services">Serviços</a></li>
+              <li><a href="#contact">Cotação</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+
+<!--- End Navigation ---->
+
+<!--- Header ---->
+<div id="header" class="header">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 col-md-6 wow bounceInLeft">
+               <h1>Bem vindo ao seu espaço online.</h1>
+               <p><strong>Através desse web site você poderá preencher todos os dados necessários para que possamos fazer a cotação do seu seguro de automóvel. </strong></p>
+       <a href="#contact"><button class="btn btn-lg btn-primary">Solicite sua cotação agora</button></a>
+                </div>
+           <div class="col-lg-6 col-md-6 wow bounceInRight">
+               {% block hero %}<img src="images/Roilton.png" class="img-circle" alt="Roilton Seguros">{% endblock hero %}
+           </div>
+       </div>
+ </div>
+</div>
+
+</header>
+<!---- End Header ---->
+
+<!--- Services ---->
+<div id="services" class="services">
+   <div class="container">
+       <h2 class="wow fadeInUp">Serviços exclusivos</h2>
+       <p class="wow fadeInUp" data-wow-delay="0.4">Veja as vantagens de realizar seu seguro com um Corretor Oficial qualificado:</p>
+       <div class="row">
+           <div class="col-lg-3 col-md-3 wow fadeInLeft" data-wow-delay="1.8s">
+               <i class="fa fa-eye fa-3x" aria-hidden="true"></i>
+               <h4>Assistência 24h</h4>
+               <p>Estamos sempre a postos para atender qualquer tipo de ocorrência.</p>
+           </div>
+           <div class="col-lg-3 col-md-3 wow fadeInLeft" data-wow-delay="1.4s">
+               <i class="fa fa-usd" aria-hidden="true"></i>
+               <h4>Melhor preço do mercado</h4>
+               <p>Garantimos o melhor preço do mercado de acordo com as suas necessidades.</p>
+           </div>
+           <div class="col-lg-3 col-md-3 wow fadeInLeft" data-wow-delay="0.8s">
+               <i class="fa fa-shield" aria-hidden="true"></i>
+                <h4>Melhores Seguradoras</h4>
+               <p>Sua cotação será realizada com, no mínimo, 13 seguradoras.</p>
+           </div>
+           <div class="col-lg-3 col-md-3 wow fadeInLeft" data-wow-delay="0.4s">
+             <i class="fa fa-user-plus" aria-hidden="true"></i>
+               <h4>Todos os tipos de seguro</h4>
+               <p>Além do seguro de automóvel, trabalhamos com outros tipos de seguro, como o de vida e casa, por exemplo. </p>
+           </div>
+       </div>
+   </div>
+</div>
+
+
+<!---- End Services ---->
+
+
+<!--- Form ------>
+
+<div id="contact" class="contact">
+  <div class="container">
+      <div class="row">
+
+        {% include 'contact.twig' %}
+
+</div>
+</div>
+</div>
+
+<!---- End Form ----->
+
+<!---- Footer ---->
+<div id="footer" class="footer">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-4 col-md-4">
+               <h4 class="wow fadeInUp">Contatos</h4>
+               <p><i class="fa fa-envelope" aria-hidden="true"></i> roilton@icoud.com</p>
+               <p><i class="fa fa-phone" aria-hidden="true"></i> (85) 98805-5171</p>
+           </div>
+           <div class="col-lg-4 col-md-4">
+               <h4>Perfil Facebook</h4>
+              <a href = "https://www.facebook.com/roilton.alves"><i class="social fa fa-facebook" aria-hidden="true"></i></a><br>
+           </div>
+       </div>
+   </div>
+</div>
+
+<!---- End Footer ---->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
