@@ -3,50 +3,71 @@
 <p>Sua cotação será realizada logo que recebermos suas informações. Ao terminar de preencher, clique em "enviar".</p>
 
 <form action="/contact" method="post">
+
+<!-- <script type="text/javascript">
+function formProcess () {
+ var capture = document.forms["input"]["name"].value;
+ capture += document.forms ["input"]["email"].value;
+ document.getElementById("outputDiv").innerHTML = capture;
+}
+</script> -->
+
 <fieldset>
-<input name="name" type="text" placeholder="Nome Completo">
-<input name="email" type="email" placeholder="E-mail">
+
+
+<input name="name" type="text" placeholder="Nome Completo" onsubmit="return false">
+<input name="email" type="email" placeholder="E-mail" onsubmit="return false">
 <input name="tel" type="text" placeholder="Telefone de contato com (DDD)">
 <input name="nasc" type="text" placeholder="Data de nascimento">
 <input name="cpf" type="text" placeholder="CPF">
-<input name="garagr" type="text" placeholder="Tem garagem na residência?">
-<div name="garag">
-<p>Possui garagem na residência?</p>
-<div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        Sim
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-        Não
-      </label>
-    </div>
-</div>
-<input name="garagt" type="text" placeholder="Tem garagem no trabalho?">
-<input name="estc" type="text" placeholder="Estado civil ">
+<input name="estc" type="text" placeholder="Estado civil">
 <input name="end" type="text" placeholder="Endereço">
 <input name="cep" type="text" placeholder="CEP">
 <input name="prof" type="text" placeholder="Profissão">
 <input name="carro" type="text" placeholder="Veículo, marca, modelo, ano (conforme documentos).">
-<input name="chassi" type="text" placeholder="Chassi">
 <input name="placa" type="text" placeholder="Placa">
-<input name="cambio" type="text" placeholder="Câmbio automático ou mecânico?">
-<input name="blin" type="text" placeholder="É blindado? (Sim/Não)">
+<input name="chassi" type="text" placeholder="Chassi">
+
+
+<div class="switch-field">
+  <div class="switch-title">Possui garagem na residência?</div>
+      <input type="radio" id="garagr" name="garagr" value="Sim" checked/>
+        <label for="garagr">Sim</label>
+        <input type="radio" id="naogaragr" name="garagr" value="Não" />
+        <label for="naogaragr">Não</label>
+      </div>
+
+
+<div class="switch-field">
+  <div class="switch-title">Possui garagem no trabalho?</div>
+      <input type="radio" id="garagt" name="garagt" value="Sim" checked/>
+        <label for="garagt">Sim</label>
+        <input type="radio" id="naogaragt" name="garagt" value="Não" />
+        <label for="naogaragt">Não</label>
+      </div>
+
+
+  <div class="switch-field">
+    <div class="switch-title">Tipo de câmbio:</div>
+        <input type="radio" id="mecanico" name="cambio" value="Mecanico" checked/>
+          <label for="mecanico">Macânico</label>
+          <input type="radio" id="automatico" name="cambio" value="Automatico"/>
+          <label for="automatico">Automático</label>
+        </div>
+
+
+  <div class="switch-field">
+    <div class="switch-title">O veículo é blindado?</div>
+        <input type="radio" id="blindado" name="blindado" value="Sim" checked/>
+          <label for="blindado">Sim</label>
+          <input type="radio" id="naoBlindado" name="blindado" value="Não" />
+          <label for="naoBlindado">Não</label>
+      </div>
+
+
 </fieldset>
-<div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        Option one is this and that&mdash;be sure to include why it's great
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-        Option two can be something else and selecting it will deselect option one
-      </label>
-    </div>
-<input type="submit" class="button" value="Enviar">
+
+<input id="submit-form" type="submit" class="button" value="Enviar" />
+
+
 </form>
